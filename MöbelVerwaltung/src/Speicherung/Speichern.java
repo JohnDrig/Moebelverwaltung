@@ -15,10 +15,7 @@ public class Speichern {
 	private static final long serialVersionUID = 8800137869883795826L;
 
 	/*
-	 * ich habe versucht die Räume mit allen Daten in externe Dateien zu speichern,
-	 * wie im letzten Projekt, aber ich habe das nicht hinbekommen, da immer ein
-	 * Fehler aufkam, den ich auch verstanden habe, aber es dennoch nicht
-	 * hinbekommen habe :(
+	 * hier werden die Daten in externe Dateien gespeichert
 	 */
 
 	private String path = "D:\\Downloads\\Save Data";
