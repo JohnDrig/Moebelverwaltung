@@ -11,8 +11,8 @@ public class Database {
 	 * mit diesem Code verbinde ich eine Datenbank mit mySQL mit der mySQL
 	 * Workbench, um Daten in eine Datenbank abzuspeichern. Mir ist klar, dass diese
 	 * Anwendung mit der Datenbank nur bei meinem Computer funktioniert, da es nicht
-	 * mit einem Network läuft, aber ich wollte mal versuchen die Daten mit einer
-	 * externen Datenbank zu verknüpfen.
+	 * mit einem Network lÃ¤uft, aber ich wollte mal versuchen die Daten mit einer
+	 * externen Datenbank zu verknÃ¼pfen.
 	 */
 
 	public void ConnectDatabase(int nummer, int stockwerk, int anzahlStuhl, int anzahlTisch, int anzahlSchrank) {
@@ -24,15 +24,15 @@ public class Database {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
 			Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/möbelverwaltung?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Berlin",
-					"root", "IronMan03");
+					"jdbc:mysql://localhost:3306/mÃ¶belverwaltung?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Berlin",
+					"root", "password");
 
 			String query = "insert into raum(nummer, stockwerk, anzahlStuhl, anzahlTisch, anzahlSchrank)values("
 					+ nummer + ", " + stockwerk + ",0,0,0);";
 
 			stmt = con.createStatement();
 			rs = stmt.executeUpdate(query);
-			System.out.println("Raum wurde erfolgreich in die Datenbank hinzugefügt");
+			System.out.println("Raum wurde erfolgreich in die Datenbank hinzugefÃ¼gt");
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -55,7 +55,7 @@ public class Database {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
 			Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/möbelverwaltung?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Berlin",
+					"jdbc:mysql://localhost:3306/mÃ¶belverwaltung?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Berlin",
 					"root", "IronMan03");
 
 			String query = "delete from raum where id = " + id + ";";
@@ -90,7 +90,7 @@ public class Database {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
 			Connection con = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/möbelverwaltung?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Berlin",
+					"jdbc:mysql://localhost:3306/mÃ¶belverwaltung?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Berlin",
 					"root", "IronMan03");
 
 			if (type == 0) {
