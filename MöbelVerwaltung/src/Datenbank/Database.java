@@ -26,6 +26,7 @@ public class Database {
 			Connection con = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/möbelverwaltung?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Berlin",
 					"root", "password");
+			//mein Passwort gebe ich nicht bekannt :D, deswegen steht dort nur "password"
 
 			String query = "insert into raum(nummer, stockwerk, anzahlStuhl, anzahlTisch, anzahlSchrank)values("
 					+ nummer + ", " + stockwerk + ",0,0,0);";
